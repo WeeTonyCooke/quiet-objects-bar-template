@@ -1,6 +1,6 @@
 # Quiet Objects — Bar Template
 
-Config-driven website template for neighbourhood bar-restaurants (Rosato’s-class venues): cosy room, proper food, weekly programme, Saturday music — no splash specials.
+Config-driven website template for neighbourhood bar-restaurants: cosy room, proper food, weekly programme, weekend music — no splash specials.
 
 ## Demo venue
 

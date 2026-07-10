@@ -4,14 +4,14 @@
   "taglineShort": "Bar & restaurant with open fires, proper food, and music at the weekend.",
   "place": "Moville, Co. Donegal",
   "address": {
-    "street": "7 Malin Road",
+    "street": "14 Bath Green",
     "locality": "Moville",
     "region": "Co. Donegal",
-    "postalCode": "F93 D519",
+    "postalCode": "F93 HX42",
     "country": "Ireland",
-    "landmark": "On Malin Road, just up from the pier"
+    "landmark": "On Bath Green, a short walk from the village centre"
   },
-  "phone": "+353 74 938 0000",
+  "phone": "+353 74 937 2140",
   "email": "hello@thehearth.example",
   "bookingUrl": "#visit",
   "bookingNote": "Bookings are for indoor dining only. Outdoor seating is walk-in.",
@@ -34,7 +34,7 @@
   "room": {
     "eyebrow": "The room",
     "title": "A corner for pints, plates, and the fire.",
-    "body": "The Hearth is a neighbourhood bar and restaurant — open fires, a proper kitchen, and a welcome that doesn’t hurry you. Come for a toasted sandwich and a pint midweek; stay for live music on Saturday.",
+    "body": "The Hearth is a neighbourhood bar and restaurant — open fires, a proper kitchen, and a welcome that doesn’t hurry you. Come for a midweek plate and a pint; stay for music when the weekend lands.",
     "image": "",
     "imageAlt": "Restaurant table with warm ambient lighting"
   },
@@ -44,17 +44,17 @@
     "note": "Line-ups can shift — check Instagram for the latest.",
     "events": [
       {
-        "name": "Texas Hold’em",
-        "when": "Wednesdays from 21:30",
-        "kind": "poker"
+        "name": "Open Mic",
+        "when": "Thursdays from 21:00",
+        "kind": "music"
       },
       {
-        "name": "Quiz Night",
-        "when": "Fridays from 22:00",
-        "kind": "quiz"
+        "name": "Trad Session",
+        "when": "Fridays from 21:30",
+        "kind": "music"
       },
       {
-        "name": "Live Music",
+        "name": "Live Band",
         "when": "Saturdays from 22:00",
         "kind": "music"
       }
@@ -63,25 +63,25 @@
   "menu": {
     "eyebrow": "Eat & drink",
     "title": "Simple food, done properly.",
-    "intro": "Irish and Italian plates, toasted sandwiches, pizza, and a bar that knows its beer.",
+    "intro": "Seasonal plates, toasties, wood-fired pizza, and a bar that knows its beer.",
     "sections": [
       {
         "id": "to-start",
         "name": "To start",
         "items": [
           {
-            "name": "Soup of the day",
-            "description": "With homemade brown bread",
-            "price": "6.50"
+            "name": "Smoked mackerel pâté",
+            "description": "Pickled cucumber, soda bread",
+            "price": "8.50"
           },
           {
-            "name": "Seafood chowder",
-            "description": "Donegal fish, cream, dill",
-            "price": "9.50"
+            "name": "Chicken wings",
+            "description": "Hot sauce or sticky glaze, blue cheese dip",
+            "price": "9.00"
           },
           {
-            "name": "Breaded mushrooms",
-            "description": "Garlic aioli",
+            "name": "Whipped feta",
+            "description": "Honey, chilli, warm flatbread",
             "price": "7.50"
           }
         ]
@@ -91,18 +91,18 @@
         "name": "Toasted sandwiches",
         "items": [
           {
-            "name": "Ham & cheese",
-            "description": "On sourdough, with crisps or salad",
-            "price": "8.50"
-          },
-          {
-            "name": "Chicken & stuffing",
-            "description": "Mayo, red onion",
+            "name": "Tuna melt",
+            "description": "Cheddar, red onion, on sourdough",
             "price": "9.00"
           },
           {
+            "name": "BLT toastie",
+            "description": "Bacon, tomato, lettuce, mayo",
+            "price": "8.50"
+          },
+          {
             "name": "The Hearth melt",
-            "description": "Cheddar, tomato, onion, mustard",
+            "description": "Mature cheddar, caramelised onion, mustard",
             "price": "8.50"
           }
         ]
@@ -112,24 +112,24 @@
         "name": "Mains",
         "items": [
           {
-            "name": "Steak burger",
-            "description": "Brioche, cheddar, relish, fries",
+            "name": "Chicken & leek pie",
+            "description": "Puff pastry, mash, greens",
             "price": "16.50"
           },
           {
-            "name": "Battered haddock",
-            "description": "Mushy peas, tartare, fries",
-            "price": "17.95"
+            "name": "Catch of the day",
+            "description": "Ask the bar — usually with fries and salad",
+            "price": "18.50"
           },
           {
-            "name": "Beef lasagne",
-            "description": "Garlic bread, side salad",
-            "price": "15.50"
+            "name": "Slow-cooked beef stew",
+            "description": "Root vegetables, herb dumpling",
+            "price": "16.00"
           },
           {
-            "name": "10oz sirloin",
-            "description": "Pepper sauce or garlic butter, one side",
-            "price": "31.95"
+            "name": "Roast cauliflower",
+            "description": "Tahini, pomegranate, flatbread",
+            "price": "14.50"
           }
         ]
       },
@@ -143,13 +143,13 @@
             "price": "12.50"
           },
           {
-            "name": "Pepperoni",
-            "description": "Tomato, mozzarella, pepperoni",
-            "price": "14.00"
+            "name": "Funghi",
+            "description": "Mushroom, thyme, garlic oil",
+            "price": "13.50"
           },
           {
-            "name": "Quay special",
-            "description": "Goat’s cheese, red onion, rocket",
+            "name": "Hearth special",
+            "description": "Nduja, mozzarella, honey, rocket",
             "price": "14.50"
           }
         ]
@@ -184,8 +184,8 @@
   },
   "visit": {
     "eyebrow": "Visit",
-    "title": "Find us on Malin Road.",
-    "parkingTip": "Street parking along Malin Road; easier after 18:00."
+    "title": "Find us on Bath Green.",
+    "parkingTip": "Street parking around Bath Green; easier after 18:00."
   },
   "ordering": {
     "enabled": true,
