@@ -1,0 +1,207 @@
+{
+  "name": "The Hearth",
+  "tagline": "Cosy bar & restaurant · Moville",
+  "taglineShort": "Bar & restaurant with open fires, proper food, and music at the weekend.",
+  "place": "Moville, Co. Donegal",
+  "address": {
+    "street": "7 Malin Road",
+    "locality": "Moville",
+    "region": "Co. Donegal",
+    "postalCode": "F93 D519",
+    "country": "Ireland",
+    "landmark": "On Malin Road, just up from the pier"
+  },
+  "phone": "+353 74 938 0000",
+  "email": "hello@thehearth.example",
+  "bookingUrl": "#visit",
+  "bookingNote": "Bookings are for indoor dining only. Outdoor seating is walk-in.",
+  "mapEmbedUrl": "https://www.google.com/maps?q=Moville,+Co.+Donegal&output=embed",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Moville,+Co.+Donegal",
+  "hours": [
+    { "days": "Monday – Thursday", "time": "16:00 – 23:00" },
+    { "days": "Friday – Saturday", "time": "15:00 – 00:30" },
+    { "days": "Sunday", "time": "12:30 – 22:00" }
+  ],
+  "hoursSummary": "Open daily from 16:00 · Kitchen until 21:00",
+  "social": {
+    "instagram": "https://instagram.com/",
+    "facebook": "https://facebook.com/"
+  },
+  "hero": {
+    "image": "",
+    "imageAlt": "Warm bar interior with wood and low light"
+  },
+  "room": {
+    "eyebrow": "The room",
+    "title": "A corner for pints, plates, and the fire.",
+    "body": "The Hearth is a neighbourhood bar and restaurant — open fires, a proper kitchen, and a welcome that doesn’t hurry you. Come for a toasted sandwich and a pint midweek; stay for live music on Saturday.",
+    "image": "",
+    "imageAlt": "Restaurant table with warm ambient lighting"
+  },
+  "programme": {
+    "eyebrow": "What’s on",
+    "title": "The week, as we keep it.",
+    "note": "Line-ups can shift — check Instagram for the latest.",
+    "events": [
+      {
+        "name": "Texas Hold’em",
+        "when": "Wednesdays from 21:30",
+        "kind": "poker"
+      },
+      {
+        "name": "Quiz Night",
+        "when": "Fridays from 22:00",
+        "kind": "quiz"
+      },
+      {
+        "name": "Live Music",
+        "when": "Saturdays from 22:00",
+        "kind": "music"
+      }
+    ]
+  },
+  "menu": {
+    "eyebrow": "Eat & drink",
+    "title": "Simple food, done properly.",
+    "intro": "Irish and Italian plates, toasted sandwiches, pizza, and a bar that knows its beer.",
+    "sections": [
+      {
+        "id": "to-start",
+        "name": "To start",
+        "items": [
+          {
+            "name": "Soup of the day",
+            "description": "With homemade brown bread",
+            "price": "6.50"
+          },
+          {
+            "name": "Seafood chowder",
+            "description": "Donegal fish, cream, dill",
+            "price": "9.50"
+          },
+          {
+            "name": "Breaded mushrooms",
+            "description": "Garlic aioli",
+            "price": "7.50"
+          }
+        ]
+      },
+      {
+        "id": "toasted",
+        "name": "Toasted sandwiches",
+        "items": [
+          {
+            "name": "Ham & cheese",
+            "description": "On sourdough, with crisps or salad",
+            "price": "8.50"
+          },
+          {
+            "name": "Chicken & stuffing",
+            "description": "Mayo, red onion",
+            "price": "9.00"
+          },
+          {
+            "name": "The Hearth melt",
+            "description": "Cheddar, tomato, onion, mustard",
+            "price": "8.50"
+          }
+        ]
+      },
+      {
+        "id": "mains",
+        "name": "Mains",
+        "items": [
+          {
+            "name": "Steak burger",
+            "description": "Brioche, cheddar, relish, fries",
+            "price": "16.50"
+          },
+          {
+            "name": "Battered haddock",
+            "description": "Mushy peas, tartare, fries",
+            "price": "17.95"
+          },
+          {
+            "name": "Beef lasagne",
+            "description": "Garlic bread, side salad",
+            "price": "15.50"
+          },
+          {
+            "name": "10oz sirloin",
+            "description": "Pepper sauce or garlic butter, one side",
+            "price": "31.95"
+          }
+        ]
+      },
+      {
+        "id": "pizza",
+        "name": "Pizza",
+        "items": [
+          {
+            "name": "Margherita",
+            "description": "Tomato, mozzarella, basil",
+            "price": "12.50"
+          },
+          {
+            "name": "Pepperoni",
+            "description": "Tomato, mozzarella, pepperoni",
+            "price": "14.00"
+          },
+          {
+            "name": "Quay special",
+            "description": "Goat’s cheese, red onion, rocket",
+            "price": "14.50"
+          }
+        ]
+      },
+      {
+        "id": "drinks",
+        "name": "From the bar",
+        "items": [
+          {
+            "name": "Guinness",
+            "description": "Pint",
+            "price": "5.80"
+          },
+          {
+            "name": "Local craft lager",
+            "description": "Ask what’s on",
+            "price": "6.20"
+          },
+          {
+            "name": "House red / white",
+            "description": "Glass",
+            "price": "6.50"
+          },
+          {
+            "name": "Soft drinks & coffee",
+            "description": "Full list at the bar",
+            "price": "from 3.00"
+          }
+        ]
+      }
+    ]
+  },
+  "visit": {
+    "eyebrow": "Visit",
+    "title": "Find us on Malin Road.",
+    "parkingTip": "Street parking along Malin Road; easier after 18:00."
+  },
+  "ordering": {
+    "enabled": true,
+    "mode": "collection",
+    "eyebrow": "Order pizza",
+    "title": "Collection only.",
+    "intro": "Choose your pizzas online and collect from the bar. We don’t deliver — pay when you pick up.",
+    "menuSectionId": "pizza",
+    "leadMinutes": 30,
+    "kitchenCloses": "21:00",
+    "payNote": "Pay on collection — card or cash.",
+    "minOrder": 0,
+    "successMessage": "Order received. We’ll have it ready for collection."
+  },
+  "credit": {
+    "label": "A Quiet Objects template",
+    "url": "https://quietobjects.ie"
+  }
+}
