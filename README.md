@@ -61,6 +61,7 @@ Fraunces (display) + Source Sans 3 (body).
 
 ## Docs
 
+- [`docs/NEXT-STEPS.md`](docs/NEXT-STEPS.md) — what to do next (PR, Identity, Oran pilot)
 - [`docs/CONTENT-MODEL.md`](docs/CONTENT-MODEL.md) — JSON schema
 - [`docs/CMS-ADMIN.md`](docs/CMS-ADMIN.md) — Identity + Decap
 - [`docs/ORAN-PILOT.md`](docs/ORAN-PILOT.md) — pilot field set
