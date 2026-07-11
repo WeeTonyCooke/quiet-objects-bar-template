@@ -37,3 +37,7 @@ Always pass the demo site explicitly so The Hearth isn’t overwritten:
 ```bash
 npx netlify deploy --prod --dir=demos/thedubliner-hearth --site=cc412ff3-5540-4957-8e5b-e25082a4bae2
 ```
+
+## Later (logged, not started)
+
+- **TemplateBot** — update template backends via chat agent (Telegram → WhatsApp). Menu/price PDF uploads, confirm-then-write into the same content model as `/admin`. Spec notes: [`TEMPLATE-BOT.md`](./TEMPLATE-BOT.md). Source PDF still in Downloads (`template_bot_specification.pdf`) until we decide to version it in-repo.
