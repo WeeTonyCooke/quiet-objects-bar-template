@@ -1,31 +1,50 @@
+import { useMemo } from 'react'
+import { getTonight } from '../lib/programme.js'
+
 const KIND_LABEL = {
   poker: '♠',
   quiz: '?',
   music: '♪',
+  other: '·',
 }
 
 export function WhatsOn({ venue }) {
   const { programme, social } = venue
+  const tonight = useMemo(() => getTonight(programme), [programme])
+  const lineup = Array.isArray(programme.lineup) ? programme.lineup : []
 
   return (
     <section id="whats-on" className="section whats-on" data-reveal>
       <div className="section__intro">
         <p className="eyebrow">{programme.eyebrow}</p>
         <h2 className="section__title">{programme.title}</h2>
+        {tonight.short ? (
+          <p className="section__body whats-on__tonight">
+            <strong>{tonight.label}</strong> {tonight.detail || tonight.short}
+          </p>
+        ) : null}
       </div>
 
       <ul className="programme">
-        {programme.events.map((event) => (
-          <li className="programme__item" key={event.name}>
-            <span className="programme__mark" aria-hidden="true">
-              {KIND_LABEL[event.kind] || '·'}
-            </span>
-            <div>
-              <h3 className="programme__name">{event.name}</h3>
-              <p className="programme__when">{event.when}</p>
-            </div>
-          </li>
-        ))}
+        {lineup.map((event) => {
+          const isToday = Number(event.day) === tonight.day
+          return (
+            <li
+              className={`programme__item${isToday ? ' is-today' : ''}`}
+              key={`${event.day}-${event.name}-${event.time}`}
+            >
+              <span className="programme__mark" aria-hidden="true">
+                {KIND_LABEL[event.kind] || '·'}
+              </span>
+              <div>
+                <h3 className="programme__name">
+                  <span className="programme__day">{event.dayLabel}</span> {event.name}
+                </h3>
+                <p className="programme__when">{event.time}</p>
+              </div>
+            </li>
+          )
+        })}
       </ul>
 
       <p className="programme__note">

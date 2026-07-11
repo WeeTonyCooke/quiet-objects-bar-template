@@ -1,5 +1,6 @@
 export function Footer({ venue }) {
   const year = new Date().getFullYear()
+  const gift = venue.giftCards
 
   return (
     <footer className="site-footer">
@@ -26,6 +27,11 @@ export function Footer({ venue }) {
           <a href={venue.social.facebook} target="_blank" rel="noreferrer">
             Facebook
           </a>
+          {gift?.url ? (
+            <a href={gift.url} target="_blank" rel="noreferrer">
+              {gift.label || 'Gift cards'}
+            </a>
+          ) : null}
         </div>
       </div>
 

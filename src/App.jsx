@@ -1,5 +1,8 @@
 import { useEffect } from 'react'
-import venue from '../content/venue.json'
+import venueBase from '../content/venue.json'
+import programme from '../content/programme.json'
+import menu from '../content/menu.json'
+import { mergeVenue } from './lib/programme.js'
 import { CartProvider } from './cart/CartContext.jsx'
 import { Header } from './components/Header.jsx'
 import { Hero } from './components/Hero.jsx'
@@ -11,6 +14,8 @@ import { WhatsOn } from './components/WhatsOn.jsx'
 import { Visit } from './components/Visit.jsx'
 import { Footer } from './components/Footer.jsx'
 import { useReveal } from './hooks/useReveal.js'
+
+const venue = mergeVenue(venueBase, programme, menu)
 
 function buildLocalBusinessSchema(v) {
   return {
