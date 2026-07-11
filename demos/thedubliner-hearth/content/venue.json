@@ -1,0 +1,18 @@
+{
+  "name": "The Dubliner",
+  "tagline": "Authentic Irish bar & restaurant · Est. 2022",
+  "place": "2 Center Plaza · Boston, MA",
+  "bookingUrl": "https://www.opentable.com/r/the-dubliner-irish-pub-and-restaurant-reservations-boston?restref=1246279&lang=en-US&ot_source=Restaurant%20website",
+  "social": {
+    "instagram": "https://www.instagram.com/thedublinerboston",
+    "facebook": "https://www.facebook.com/thedublinerboston"
+  },
+  "giftCards": {
+    "label": "Gift cards",
+    "url": "http://thedublinerboston.webgiftcardsales.com/"
+  },
+  "credit": {
+    "label": "A Quiet Objects demo",
+    "url": "https://quietobjects.ie"
+  }
+}
