@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { getTonight } from '../lib/programme.js'
 
 export function Header({ venue }) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const canOrder = Boolean(venue.ordering?.enabled)
+  const tonight = useMemo(() => getTonight(venue.programme), [venue.programme])
 
   useEffect(() => {
     const hero = document.getElementById('top')
@@ -32,6 +34,11 @@ export function Header({ venue }) {
       <div className="site-header__inner">
         <a className="site-header__brand" href="#top" onClick={close}>
           {venue.name}
+        </a>
+
+        <a className="tonight-cue" href={tonight.href} onClick={close}>
+          <span className="tonight-cue__label">{tonight.label}</span>
+          <span className="tonight-cue__line">{tonight.short}</span>
         </a>
 
         <button

@@ -2,6 +2,8 @@
 
 Config-driven website template for neighbourhood bar-restaurants: cosy room, proper food, weekly programme, weekend music — no splash specials.
 
+**Product:** Hybrid + Light — the bar edits music / Tonight and a light menu; Quiet Objects owns design and structure.
+
 ## Demo venue
 
 **The Hearth** — fictional Moville bar & restaurant used to showcase the template.
@@ -10,7 +12,8 @@ Config-driven website template for neighbourhood bar-restaurants: cosy room, pro
 
 - Vite + React
 - Netlify (`netlify.toml` SPA fallback)
-- Content: [`content/venue.json`](content/venue.json)
+- Content: `content/programme.json` + `content/menu.json` (bar) · `content/venue.json` (Quiet Objects)
+- Admin: Decap CMS + Netlify Identity at `/admin/` — see [`docs/CMS-ADMIN.md`](docs/CMS-ADMIN.md)
 
 ## Local development
 
@@ -24,46 +27,42 @@ npm run build
 npm run preview
 ```
 
+CMS locally: `npx decap-server` then open `/admin/`.
+
 ## Reskin for a client
 
-Edit `content/venue.json`:
+Quiet Objects edits `content/venue.json` (name, place, hours, booking, gift-card URL, ordering).
 
-- Name, tagline, place, address, hours, phone
-- Hero / room images
-- Menu sections and items
-- Weekly programme
-- Booking note, map, social links
-
-Redeploy. No redesign required for a standard venue swap.
+Bar staff edit Programme + Menu in `/admin/` after Identity invite.
 
 ## Sections
 
 1. Hero — brand as hero signal + Book / Menu
 2. The room — short editorial
-3. Eat & drink — HTML menu with prices
+3. Eat & drink — light menu from JSON
 4. **Order pizza** — collection-only cart (optional via `ordering.enabled`)
-5. What’s on — weekly programme as culture
+5. What’s on — weekly programme + live Tonight cue
 6. Visit — hours, landmark address, map, calm booking form
-7. Footer — contact + social satellite + Quiet Objects credit
+7. Footer — contact + social + optional gift-card link + Quiet Objects credit
 
-## Pizza collection orders
+## Gift cards
 
-Configured in `content/venue.json` → `ordering`:
-
-- Collection only (no delivery)
-- Pizzas pulled from the menu section id (`pizza`)
-- Cart drawer + collection time slots
-- Pay on collection
-- Submits to Netlify Forms (`pizza-collection`) via `public/__forms.html`
-
-Toggle with `"enabled": false` to hide the feature per client.
+Outbound link only (`venue.giftCards.url`). No checkout on Quiet Objects.
 
 ## Design
 
 Farrow & Ball–led, applied for screen:
 
 - **Card Room Green** (deepened for UI) — brand, CTAs, prices
-- **Clean paper** — light ground (School House White lifted so type doesn’t get lost)
-- **Drop Cloth** — hairlines / trim only, never a bronze page wash
+- **Clean paper** — light ground
+- **Drop Cloth** — hairlines / trim only
 
 Fraunces (display) + Source Sans 3 (body).
+
+## Docs
+
+- [`docs/CONTENT-MODEL.md`](docs/CONTENT-MODEL.md) — JSON schema
+- [`docs/CMS-ADMIN.md`](docs/CMS-ADMIN.md) — Identity + Decap
+- [`docs/ORAN-PILOT.md`](docs/ORAN-PILOT.md) — pilot field set
+- [`docs/MENU-UPGRADE.md`](docs/MENU-UPGRADE.md) — full multi-service path
+- [`docs/DESIGN-PRINCIPLES.md`](docs/DESIGN-PRINCIPLES.md)

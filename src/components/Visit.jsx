@@ -54,6 +54,13 @@ export function Visit({ venue }) {
               <a href={`mailto:${email}`}>{email}</a>
             </p>
             <p className="visit__tip">{visit.parkingTip}</p>
+            {venue.giftCards?.url ? (
+              <p className="visit__tip">
+                <a href={venue.giftCards.url} target="_blank" rel="noreferrer">
+                  {venue.giftCards.label || 'Gift cards'}
+                </a>
+              </p>
+            ) : null}
           </div>
         </div>
 
