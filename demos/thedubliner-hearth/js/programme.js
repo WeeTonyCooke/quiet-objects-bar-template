@@ -2,6 +2,13 @@
  * Shared Tonight helpers for static demos (mirrors src/lib/programme.js).
  * day: 0 = Sunday … 6 = Saturday
  */
+
+function cueLine(rows) {
+  return rows
+    .map((row) => row.cue || [row.name, row.time].filter(Boolean).join(' · '))
+    .join(' · ')
+}
+
 export function getTonight(programme, now = new Date()) {
   const day = now.getDay()
   const lineup = Array.isArray(programme?.lineup) ? programme.lineup : []
@@ -9,19 +16,21 @@ export function getTonight(programme, now = new Date()) {
   const label = day === 0 ? 'Sunday' : 'Tonight'
 
   if (programme?.tonightOverride?.trim()) {
+    const override = programme.tonightOverride.trim()
     return {
       day,
       label,
-      short: programme.tonightOverride.trim(),
-      detail: programme.tonightOverride.trim(),
+      short: override,
+      shortGig: override,
+      detail: override,
       href: '#music',
     }
   }
 
   if (todays.length) {
-    const short = todays
-      .map((row) => row.cue || [row.name, row.time].filter(Boolean).join(' · '))
-      .join(' · ')
+    const short = cueLine(todays)
+    const gigs = todays.filter((row) => row.kind === 'music')
+    const shortGig = gigs.length ? cueLine(gigs) : short
     const detail = todays
       .map(
         (row) =>
@@ -30,22 +39,27 @@ export function getTonight(programme, now = new Date()) {
           [row.dayLabel, row.name, row.time].filter(Boolean).join(' · '),
       )
       .join(' · ')
-    const href = todays.find((row) => row.href)?.href || '#music'
+    const href =
+      (gigs.find((row) => row.href) || todays.find((row) => row.href))?.href ||
+      '#music'
     return {
       day,
       label,
       short,
+      shortGig,
       detail,
       href,
       items: todays,
     }
   }
 
+  const fallback = programme?.note || 'See what’s on below'
   return {
     day,
     label: 'This week',
-    short: programme?.note || 'See what’s on below',
-    detail: programme?.note || 'See what’s on below',
+    short: fallback,
+    shortGig: fallback,
+    detail: fallback,
     href: '#music',
     items: [],
   }

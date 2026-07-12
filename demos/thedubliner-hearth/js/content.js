@@ -141,6 +141,9 @@ function applyTonight(tonight) {
   document.querySelectorAll('[data-tonight-line]').forEach((el) => {
     el.textContent = tonight.short
   })
+  document.querySelectorAll('[data-tonight-gig]').forEach((el) => {
+    el.textContent = tonight.shortGig || tonight.short
+  })
   document.querySelectorAll('[data-tonight-detail]').forEach((el) => {
     el.textContent = tonight.detail
   })

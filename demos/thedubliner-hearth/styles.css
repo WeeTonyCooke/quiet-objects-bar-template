@@ -172,6 +172,10 @@ a {
   text-overflow: ellipsis;
 }
 
+.tonight-cue__line--gig {
+  display: none;
+}
+
 .tonight-cue:hover .tonight-cue__line {
   color: var(--brass-deep);
 }
@@ -288,6 +292,14 @@ a {
     min-width: 0;
     font-size: 0.72rem;
     font-weight: 600;
+  }
+
+  .tonight-cue__line--full {
+    display: none;
+  }
+
+  .tonight-cue__line--gig {
+    display: block;
   }
 
   .site-header .btn--gold {
